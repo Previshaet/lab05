@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 option(BUILD_TESTS "Build tests" OFF)
 
 if(BUILD_TESTS)                   # Если надо собрать тесты, добавляем опцию компилятора --coverage,
- # add_compile_options(--coverage) # которая оставляет после прогонки кода отчёт о покрытии
+  add_compile_options(--coverage) # которая оставляет после прогонки кода отчёт о покрытии
 endif()
 
 project (banking)
@@ -22,7 +22,6 @@ target_link_libraries(banking gcov)
 
 #Собираем тесты из исходников, лежащих в директории tests
 if(BUILD_TESTS)
-  add_compile_options(-ze)
   enable_testing()
   add_subdirectory(third-party/gtest)
   file(GLOB BANKING_TEST_SOURCES tests/*.cpp)
