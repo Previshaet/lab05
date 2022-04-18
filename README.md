@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/Previshaet/lab05/badge.svg?branch=main)](https://coveralls.io/github/Previshaet/lab05?branch=main)
+
 ## Laboratory work V
 
 Данная лабораторная работа посвещена изучению фреймворков для тестирования на примере **GTest**
